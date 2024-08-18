@@ -1,6 +1,6 @@
 {
   "name": "itys",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Finite State Machine mixins and helpers for programming state logic.",
