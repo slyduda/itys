@@ -1,8 +1,8 @@
 {
   "name": "itys",
   "version": "0.1.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist",
+  "types": "dist",
   "description": "Finite State Machine mixins and helpers for programming state logic.",
   "license": "MIT",
   "devDependencies": {
