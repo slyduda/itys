@@ -1,4 +1,10 @@
-import { ErrorName } from "./errors";
+export type ErrorName =
+  | "ConditionValue"
+  | "ConditionUndefined"
+  | "TriggerUndefined"
+  | "EffectError"
+  | "EffectUndefined"
+  | "OriginDisallowed";
 
 type Effect<T> = keyof T; // Ensures only methods of T can be used as effects
 type Condition<T> = keyof T; // Ensures only methods of T can be used as conditions
@@ -46,7 +52,7 @@ export type TransitionResult<StateType, TriggerType extends string, T> = {
   failure: TransitionFailure<TriggerType, T> | null;
   previous: StateType;
   current: StateType;
-  transitions?: TransitionAttempt<StateType, TriggerType, T>[];
+  transitions: TransitionAttempt<StateType, TriggerType, T>[];
   precontext: T | null;
   context: T | null;
 };

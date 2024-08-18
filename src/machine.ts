@@ -1,5 +1,5 @@
 import { TransitionError } from "./errors";
-import {
+import type {
   ConditionAttempt,
   EffectAttempt,
   MachineDict,
@@ -354,8 +354,10 @@ class StateMachineWrapper<
       response.success = true;
       response.context = this.deepCopyContext();
       response.current = this.context.state;
-      return response;
+
+      break transitionLoop;
     }
+    return response;
   }
 }
 
@@ -384,4 +386,3 @@ export function addStateMachine<
 
   return proxy;
 }
-export { MachineDict };

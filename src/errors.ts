@@ -1,6 +1,5 @@
 import { ErrorName } from "./types";
 
-
 class ErrorBase<T extends string> extends Error {
   name: T;
   message: string;
