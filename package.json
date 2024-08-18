@@ -1,7 +1,11 @@
 {
   "name": "itys",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slyduda/itys.git"
+  },
   "description": "Finite State Machine mixins and helpers for programming state logic.",
   "license": "MIT",
   "devDependencies": {
@@ -23,5 +27,10 @@
     "start": "tsx ./src/index.ts",
     "bench": "vitest bench",
     "build": "vite build"
-  }
+  },
+  "keywords": [
+    "state",
+    "state machine",
+    "finite state machine"
+  ]
 }
