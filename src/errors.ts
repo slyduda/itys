@@ -1,10 +1,5 @@
-export type ErrorName =
-  | "ConditionValue"
-  | "ConditionUndefined"
-  | "TriggerUndefined"
-  | "EffectError"
-  | "EffectUndefined"
-  | "OriginDisallowed";
+import { ErrorName } from "./types";
+
 
 class ErrorBase<T extends string> extends Error {
   name: T;
@@ -22,7 +17,7 @@ class ErrorBase<T extends string> extends Error {
   }) {
     super();
     this.name = name;
-    this.message = message;
+    this.message = name + ": " + message;
     this.response = response;
   }
 }

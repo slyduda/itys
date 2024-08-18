@@ -1,6 +1,6 @@
 import { MachineDict } from "../src";
 
-export type ExampleObjectState = "initial" | "walking" | "stopped";
+export type ExampleObjectState = "walking" | "stopped";
 export type ExampleObjectTrigger = "walk" | "stop";
 
 export class ExampleObject {
@@ -9,7 +9,7 @@ export class ExampleObject {
   energy: number;
 
   constructor(energy?: number) {
-    this.state = "initial";
+    this.state = "stopped";
     this.energy = energy ?? 1;
     this.speed = 0;
   }
@@ -34,7 +34,7 @@ export const exampleMachineDict: MachineDict<
   ExampleObject
 > = {
   walk: {
-    origins: ["initial"],
+    origins: ["stopped"],
     destination: "walking",
     effects: ["speedUp"],
     conditions: ["hasEnergy"],

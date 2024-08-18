@@ -1,4 +1,4 @@
-export type ErrorName = "ConditionValue" | "ConditionUndefined" | "TriggerUndefined" | "EffectError" | "EffectUndefined" | "OriginDisallowed";
+import { ErrorName } from "./types";
 declare class ErrorBase<T extends string> extends Error {
     name: T;
     message: string;

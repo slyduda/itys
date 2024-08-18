@@ -14,7 +14,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addStateMachine = void 0;
-var machine_1 = require("./machine");
-Object.defineProperty(exports, "addStateMachine", { enumerable: true, get: function () { return machine_1.addStateMachine; } });
-__exportStar(require("./types"), exports);
+__exportStar(require("./errors"), exports);
+__exportStar(require("./machine"), exports);

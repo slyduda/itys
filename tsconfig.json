@@ -3,7 +3,9 @@
     "outDir": "dist", // Where the compiled JavaScript files will go
     "declaration": true, // Generate .d.ts files
     "declarationDir": "dist", // Where the .d.ts files will go
-    "target": "es2016"
+    "target": "es2016",
+    "moduleResolution": "nodenext",
+    "module": "NodeNext"
   },
   "include": ["src/**/*"]
 }
